@@ -56,7 +56,7 @@ export default function NegotiationV1() {
     setError(null);
 
     try {
-      const wsUrl = `ws://${BACKEND_URL}/ws/game?actor_model1=${player1Model}&actor_model2=${player2Model}&critic_model=${criticModel}&seed=1`;
+      const wsUrl = `wss://${BACKEND_URL}/ws/game?actor_model1=${player1Model}&actor_model2=${player2Model}&critic_model=${criticModel}&seed=1`;
       const ws = new WebSocket(wsUrl);
 
       ws.onopen = () => {
